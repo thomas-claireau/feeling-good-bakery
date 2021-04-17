@@ -1,6 +1,18 @@
 @import "fonts";
 @import "vars";
 
+html {
+  font-size: 10px;
+
+  @media screen and (max-width: $break-large) {
+    font-size: 9px;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    font-size: 8px;
+  }
+}
+
 body {
   font-family: $mainFont;
   margin: 0;
@@ -17,6 +29,6 @@ h1 {
 }
 
 p {
-  font-size: 19px;
+  font-size: 1.9rem;
   color: $marron;
 }
