@@ -1,5 +1,6 @@
 @import "fonts";
 @import "vars";
+@import "header";
 
 html {
   font-size: 10px;
@@ -14,8 +15,13 @@ html {
 }
 
 body {
-  font-family: $mainFont;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
   margin: 0;
+  padding: 3.7rem 10rem 6rem 10rem;
+  background-color: #fff;
+  font-family: $mainFont;
 }
 
 *,

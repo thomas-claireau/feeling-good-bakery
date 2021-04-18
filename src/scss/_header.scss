@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .social-links {
+    display: flex;
+    align-items: center;
+
+    > a {
+      $sizes: 3.3rem;
+      width: $sizes;
+      min-width: $sizes;
+      height: $sizes;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: $sizes;
+      background-color: $marron;
+
+      &:not(:first-child) {
+        margin-left: 1.5rem;
+      }
+
+      svg {
+        width: 50%;
+        height: 100%;
+
+        &[title^="facebook-"] {
+          width: 25%;
+        }
+      }
+    }
+  }
+}
