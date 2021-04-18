@@ -1,3 +1,6 @@
 import "../scss/style.scss";
+import { injectSvgs } from "./functions";
 
-console.log("passe");
+document.addEventListener("DOMContentLoaded", () => {
+  injectSvgs();
+});
