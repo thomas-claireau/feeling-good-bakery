@@ -1,2 +1,31 @@
 section.introduction {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 11.7rem;
+
+  > img {
+    width: 56rem;
+    min-width: 56rem;
+    height: 88rem;
+  }
+
+  > .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+
+    > .content {
+      max-width: 70%;
+      margin-right: 10rem;
+      text-align: center;
+    }
+
+    > img {
+      max-width: 38.2rem;
+      max-height: 48.7rem;
+      position: relative;
+      top: 4rem;
+    }
+  }
 }

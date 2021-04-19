@@ -3,6 +3,7 @@
 @import "header";
 
 @import "sections/hero";
+@import "sections/introduction";
 @import "sections/micro-biscuiterie";
 @import "sections/cookies";
 @import "sections/recettes";
@@ -65,11 +66,18 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
+h2 {
+  margin: -2rem 0 3rem 0;
+  font-size: 6.6rem;
   font-family: $secondaryFont;
+  font-style: italic;
+  font-weight: 300;
+  color: $marron;
 }
 
 p {
+  margin: 0;
   font-size: 1.9rem;
   color: $marron;
+  line-height: 4rem;
 }
