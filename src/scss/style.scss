@@ -1,7 +1,17 @@
 @import "fonts";
 @import "vars";
 @import "header";
-@import "hero";
+
+@import "sections/hero";
+@import "sections/micro-biscuiterie";
+@import "sections/cookies";
+@import "sections/recettes";
+@import "sections/produits-saison";
+@import "sections/carte";
+@import "sections/mosaique";
+@import "sections/informations";
+
+@import "footer";
 
 html {
   font-size: 10px;
