@@ -16,7 +16,7 @@ header {
       justify-content: center;
       align-items: center;
       border-radius: $sizes;
-      background-color: $marronClair;
+      background-color: $marron;
       transition: all 0.3s ease-in-out;
 
       &:not(:first-child) {
@@ -24,7 +24,7 @@ header {
       }
 
       &:hover {
-        background-color: $marron;
+        background-color: $marronFonce;
         transition: all 0.3s ease-in-out;
       }
 

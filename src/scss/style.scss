@@ -49,13 +49,13 @@ body {
     z-index: 1;
   }
 
-  > header,
-  > section,
-  > footer {
+  header,
+  section,
+  footer {
     position: relative;
   }
 
-  > header {
+  header {
     z-index: 10;
   }
 }
