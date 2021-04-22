@@ -1,2 +1,42 @@
 section.cookies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-top: 14rem;
+  padding-left: 6vw;
+
+  > img {
+    position: absolute;
+    top: -6rem;
+    left: 0;
+  }
+
+  > .left {
+    text-align: center;
+
+    > p {
+      max-width: 50rem;
+      margin: auto;
+    }
+  }
+
+  > .right {
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 51.4rem;
+      height: 48rem;
+      position: absolute;
+      bottom: -7.2rem;
+      left: -7.2rem;
+      background-color: #faf2f0;
+      z-index: 0;
+    }
+
+    > * {
+      position: relative;
+    }
+  }
 }
