@@ -1,7 +1,9 @@
 section.introduction {
   display: flex;
   justify-content: space-between;
+  position: relative;
   margin-top: 11.7rem;
+  z-index: 10;
 
   > img {
     width: 56rem;

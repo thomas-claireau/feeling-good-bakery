@@ -1,13 +1,52 @@
 section.micro-biscuiterie {
+  position: relative;
   margin-top: 10rem;
 
+  > .fond-clair {
+    position: absolute;
+    top: -16rem;
+    right: 2.8rem;
+    width: 50%;
+    height: 90%;
+    background-color: #faf2f0;
+    z-index: 0;
+
+    > img {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+
   > .content {
-    max-width: 60rem;
+    max-width: 52rem;
     margin: auto;
+    position: relative;
     text-align: center;
 
     h2 {
       line-height: 8.5rem;
+    }
+  }
+
+  > .video-container {
+    width: 92.3rem;
+    height: 52rem;
+    margin: 6rem auto 0 auto;
+
+    > img[alt="visuel-cookie"] {
+      position: absolute;
+      bottom: 35rem;
+      left: 0;
+      z-index: 1;
+    }
+
+    > video {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 10;
     }
   }
 }
