@@ -1,2 +1,107 @@
 section.recettes {
+  margin-top: 23rem;
+
+  > h2 {
+    text-align: center;
+  }
+
+  > .swiper-container {
+    width: 85%;
+    height: 100%;
+    margin: 11.6rem auto 0 auto;
+
+    .swiper-navigation {
+      $size: 10.5rem;
+      width: $size;
+      height: $size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      border-radius: $size;
+      border: 0.1rem solid $marron;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      z-index: 10;
+
+      &:hover {
+        background-color: $marron;
+        transition: all 0.3s ease-in-out;
+
+        svg polyline,
+        svg line {
+          stroke: #fff;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      &.swiper-prev {
+        left: 0;
+      }
+
+      &.swiper-next {
+        right: 0;
+      }
+
+      svg {
+        width: 50%;
+
+        polyline,
+        line {
+          stroke: $marron;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    > .button-container {
+      margin-left: 2rem;
+      margin-top: 7.3rem;
+      text-align: center;
+
+      a {
+        position: relative;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #863f22;
+
+        &:before {
+          content: "";
+          width: 105%;
+          height: 70%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, 0);
+          background-color: #f1e1de;
+          z-index: 0;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          &:before {
+            height: 100%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+
+        > * {
+          position: relative;
+        }
+      }
+    }
+  }
 }
