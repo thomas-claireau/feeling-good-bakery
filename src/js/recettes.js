@@ -24,8 +24,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     readMore.href = `#${slide.dataset.id}`;
   });
-
-  readMore.addEventListener("click", () => {
-    console.log(readMore);
-  });
 });
