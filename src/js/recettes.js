@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const swiperPrev = swiperContainer.querySelector(".swiper-prev");
   const swiperNext = swiperContainer.querySelector(".swiper-next");
   const readMore = document.querySelector("button.read-more");
+  const bg = document.querySelector("section.bg");
 
   const swiper = new Swiper(swiperContainer, {
     loop: true,
@@ -44,12 +45,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!modal) return;
 
+    const close = modal.querySelector(".close");
+
     document.body.classList.add("--modal-opened");
     modal.classList.add("open");
 
-    const close = modal.querySelector(".close");
     close.addEventListener("click", closeModal);
   });
+
+  // click outside equal to click bg section
+  bg.addEventListener("click", closeModal);
 
   function generateModal(index, data) {
     return `<div class="modal" data-id="${index}">
@@ -68,7 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function closeModal(e) {
-  const modal = e.currentTarget.closest(".modal.open");
+  console.log("passe");
+  let modal = e.currentTarget.closest(".modal.open");
+
+  if (e.currentTarget.classList.contains("bg"))
+    modal = document.querySelector(".modal.open");
 
   if (!modal) return;
 

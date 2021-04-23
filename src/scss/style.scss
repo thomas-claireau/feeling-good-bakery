@@ -51,8 +51,17 @@ body {
     z-index: 1;
   }
 
-  &:after {
-    content: "";
+  &.--modal-opened {
+    overflow: hidden;
+
+    > section.bg {
+      opacity: 0.5;
+      z-index: 100;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  > section.bg {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -62,16 +71,6 @@ body {
     opacity: 0;
     z-index: -1;
     transition: all 0.3s ease-in-out;
-  }
-
-  &.--modal-opened {
-    overflow: hidden;
-
-    &:after {
-      opacity: 0.5;
-      z-index: 100;
-      transition: all 0.3s ease-in-out;
-    }
   }
 
   header,
