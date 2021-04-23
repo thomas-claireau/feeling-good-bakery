@@ -1,6 +1,7 @@
 .modal {
   width: 90vw;
-  height: 90vh;
+  height: 90%;
+  max-height: 110rem;
   max-width: 108.8rem;
   position: fixed;
   top: 50%;
@@ -8,7 +9,15 @@
   padding: 9.2rem 10rem 6rem 10rem;
   transform: translate(-50%, -50%);
   background-color: #f9efec;
-  z-index: 1000;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+
+  &.open {
+    opacity: 1;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
 
   > .close {
     width: 1.1rem;

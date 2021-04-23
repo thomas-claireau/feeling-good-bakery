@@ -36,11 +36,28 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+  // read more : open selected modal
+  readMore.addEventListener("click", () => {
+    const modal = document.querySelector(
+      `section.modals > .modal[data-id="${readMore.dataset.id}"]`
+    );
+
+    if (!modal) return;
+
+    document.body.classList.add("--modal-opened");
+    modal.classList.add("open");
+
+    const close = modal.querySelector(".close");
+    close.addEventListener("click", closeModal);
+  });
+
   function generateModal(index, data) {
-    return `<div class="modal">
+    return `<div class="modal" data-id="${index}">
 			<img src="./assets/img/icons/cross-modal.png" alt="close-modal" class="close" />
 			<div class="content">
-				<img src="./assets/img//recettes/${index}.png" alt="cookie-${index}" />
+				<div class="cookie">
+					<img src="./assets/img//recettes/${index}.png" alt="cookie-${index}" />
+				</div>
 				<h2>${data.title}</h2>
 				<p>
 					${data.description}
@@ -49,3 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	  	</div>`;
   }
 });
+
+function closeModal(e) {
+  const modal = e.currentTarget.closest(".modal.open");
+
+  if (!modal) return;
+
+  document.body.classList.remove("--modal-opened");
+  modal.classList.remove("open");
+}
