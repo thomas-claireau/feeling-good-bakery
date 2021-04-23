@@ -5,3 +5,11 @@ export function injectSvgs() {
 
   SVGInjector(svgs);
 }
+
+export async function loadImg(path) {
+  const img = await import(`../../assets/img/${path}`).then(
+    (img) => img.default
+  );
+
+  return img;
+}

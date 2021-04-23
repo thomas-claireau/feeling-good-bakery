@@ -1,5 +1,6 @@
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
+import { loadImg } from "./functions";
 import cookies from "../../assets/recettes.json";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,7 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const modals = document.querySelector("section.modals");
 
   Object.entries(cookies).forEach((cookie) => {
-    modals.innerHTML += generateModal(cookie[0], cookie[1]);
+    generateModal(cookie[0], cookie[1]).then(
+      (modal) => (modals.innerHTML += modal)
+    );
   });
 
   // read more : open selected modal
@@ -53,12 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // click outside equal to click bg section
   bg.addEventListener("click", closeModal);
 
-  function generateModal(index, data) {
+  async function generateModal(index, data) {
+    const cookieImg = await loadImg(data.img);
+    const crossModal = await loadImg("icons/cross-modal.png");
+
     return `<div class="modal" data-id="${index}">
-			<img src="/assets/img/icons/cross-modal.png" alt="close-modal" class="close" />
+			<img src="${crossModal}" alt="close-modal" class="close" />
 			<div class="content">
 				<div class="cookie">
-					<img src="/assets/img//recettes/${index}.png" alt="cookie-${index}" />
+					<img src="${cookieImg}" alt="cookie-${index}" />
 				</div>
 				<h2>${data.title}</h2>
 				<p>
