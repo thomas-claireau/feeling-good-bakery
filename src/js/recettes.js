@@ -25,11 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     readMore.href = `#${slide.dataset.id}`;
   });
 
-  const recettes = recettesContainer.querySelectorAll(
-    ".swiper-slide:not(.swiper-slide-duplicate)"
-  );
-
-  recettes.forEach((recette) => {
-    const readMore = recette.querySelector("");
+  readMore.addEventListener("click", () => {
+    console.log(readMore);
   });
 });
