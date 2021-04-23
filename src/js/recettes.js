@@ -1,7 +1,7 @@
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
 import { loadImg } from "./functions";
-import cookies from "../../assets/recettes.json";
+import cookies from "../../assets/cookies.json";
 
 document.addEventListener("DOMContentLoaded", () => {
   const recettesContainer = document.querySelector("section.recettes");
