@@ -1,6 +1,6 @@
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
-import { loadImg } from "./functions";
+import { loadPngImg } from "./functions";
 import cookies from "../../assets/cookies.json";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
   bg.addEventListener("click", closeModal);
 
   async function generateModal(index, data) {
-    const cookieImg = await loadImg(data.img);
-    const crossModal = await loadImg("icons/cross-modal.png");
+    const cookieImg = await loadPngImg(data.img);
+    const crossModal = await loadPngImg("icons/cross-modal");
 
     return `<div class="modal" data-id="${index}">
 			<img src="${crossModal}" alt="close-modal" class="close" />
