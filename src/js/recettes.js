@@ -2,19 +2,34 @@ import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const recettes = document.querySelector("section.recettes");
+  const recettesContainer = document.querySelector("section.recettes");
 
-  if (!recettes) return;
+  if (!recettesContainer) return;
 
-  const swiperContainer = recettes.querySelector(".swiper-container");
+  const swiperContainer = recettesContainer.querySelector(".swiper-container");
   const swiperPrev = swiperContainer.querySelector(".swiper-prev");
   const swiperNext = swiperContainer.querySelector(".swiper-next");
+  const readMore = document.querySelector("a.read-more");
 
-  new Swiper(swiperContainer, {
+  const swiper = new Swiper(swiperContainer, {
     loop: true,
     navigation: {
       nextEl: swiperNext,
       prevEl: swiperPrev,
     },
+  });
+
+  swiper.on("slideChangeTransitionEnd", function () {
+    const slide = swiper.slides[swiper.activeIndex];
+
+    readMore.href = `#${slide.dataset.id}`;
+  });
+
+  const recettes = recettesContainer.querySelectorAll(
+    ".swiper-slide:not(.swiper-slide-duplicate)"
+  );
+
+  recettes.forEach((recette) => {
+    const readMore = recette.querySelector("");
   });
 });
