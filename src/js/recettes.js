@@ -1,5 +1,6 @@
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
+import cookies from "../../assets/recettes.json";
 
 document.addEventListener("DOMContentLoaded", () => {
   const recettesContainer = document.querySelector("section.recettes");
@@ -29,13 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // generate modals
   const modals = document.querySelector("section.modals");
 
-  fetch("../../assets/recettes.json")
-    .then((res) => res.json())
-    .then((data) => {
-      Object.entries(data).forEach((cookie) => {
-        modals.innerHTML += generateModal(cookie[0], cookie[1]);
-      });
-    });
+  Object.entries(cookies).forEach((cookie) => {
+    modals.innerHTML += generateModal(cookie[0], cookie[1]);
+  });
 
   // read more : open selected modal
   readMore.addEventListener("click", () => {
@@ -73,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function closeModal(e) {
-  console.log("passe");
   let modal = e.currentTarget.closest(".modal.open");
 
   if (e.currentTarget.classList.contains("bg"))
