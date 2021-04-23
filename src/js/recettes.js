@@ -2,8 +2,6 @@ import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
 import cookies from "../../assets/recettes.json";
 
-import james from "../../assets/img/recettes/james-brownie.png";
-
 document.addEventListener("DOMContentLoaded", () => {
   const recettesContainer = document.querySelector("section.recettes");
 
@@ -57,10 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function generateModal(index, data) {
     return `<div class="modal" data-id="${index}">
-			<img src="./assets/img/icons/cross-modal.png" alt="close-modal" class="close" />
+			<img src="/assets/img/icons/cross-modal.png" alt="close-modal" class="close" />
 			<div class="content">
 				<div class="cookie">
-					<img src="${james}" alt="cookie-${index}" />
+					<img src="/assets/img//recettes/${index}.png" alt="cookie-${index}" />
 				</div>
 				<h2>${data.title}</h2>
 				<p>
