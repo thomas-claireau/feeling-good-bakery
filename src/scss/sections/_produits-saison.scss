@@ -1,2 +1,48 @@
 section.produits-saison {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13rem;
+
+  > div.produit-saison {
+    width: 49rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:not(:first-child) {
+      margin-left: 4rem;
+    }
+
+    &.wookie-cup {
+      position: relative;
+      top: 15rem;
+    }
+
+    .content {
+      width: 100%;
+      padding: 3rem 1rem;
+      background-color: #faf2f0;
+      text-align: center;
+
+      .quote {
+        font-family: $secondaryFont;
+        font-size: 3rem;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      > p:not(.quote) {
+        margin-top: 2.5rem;
+        font-weight: 300;
+        color: $marronClair;
+      }
+    }
+  }
+
+  h2 {
+    margin-left: 4vw;
+    text-align: center;
+  }
 }
