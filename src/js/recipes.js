@@ -2,11 +2,11 @@ import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const recettesContainer = document.querySelector("section.recettes");
+  const recipesContainer = document.querySelector("section.recipes");
 
-  if (!recettesContainer) return;
+  if (!recipesContainer) return;
 
-  const swiperContainer = recettesContainer.querySelector(".swiper-container");
+  const swiperContainer = recipesContainer.querySelector(".swiper-container");
   const swiperPrev = swiperContainer.querySelector(".swiper-prev");
   const swiperNext = swiperContainer.querySelector(".swiper-next");
   const readMore = document.querySelector("button.read-more");

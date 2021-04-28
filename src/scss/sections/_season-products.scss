@@ -1,4 +1,4 @@
-section.produits-saison {
+section.season-products {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@ section.produits-saison {
   margin-top: 13rem;
   z-index: 10;
 
-  > div.produit-saison {
+  > div.season-product {
     width: 49rem;
     display: flex;
     justify-content: center;

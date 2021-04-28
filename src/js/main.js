@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 import { injectSvgs } from "./functions";
 import "./header";
-import "./recettes";
+import "./recipes";
 import "./map";
 
 document.addEventListener("DOMContentLoaded", () => {
