@@ -1,0 +1,53 @@
+section.mosaic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+
+  img {
+    width: auto;
+    height: auto;
+  }
+
+  > div {
+    text-align: center;
+
+    &:not(:first-child) {
+      margin-left: 6.4rem;
+    }
+
+    &.middle {
+      position: relative;
+      top: 3rem;
+
+      > div {
+        position: relative;
+
+        &:before {
+          content: "";
+          width: 32rem;
+          height: 30rem;
+          position: absolute;
+          background-color: $roseClair;
+          z-index: -1;
+        }
+      }
+
+      > .middle-top {
+        &:before {
+          top: -8rem;
+          left: -6em;
+        }
+      }
+
+      > .middle-bottom {
+        margin-top: 5rem;
+
+        &:before {
+          bottom: -7rem;
+          right: -4rem;
+        }
+      }
+    }
+  }
+}
