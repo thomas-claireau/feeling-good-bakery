@@ -1,0 +1,128 @@
+section.map-container {
+  width: 80%;
+  min-height: 95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 5rem auto 0 auto;
+  z-index: 1;
+
+  > .map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+
+    > .ingredients {
+      > .ingredient {
+        position: absolute;
+        list-style-type: none;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+
+        &.visible {
+          opacity: 1;
+          transition: opacity 0.8s ease-in-out;
+        }
+
+        > .dot {
+          $sizes: 1rem;
+          width: $sizes;
+          height: $sizes;
+          position: absolute;
+          border-radius: $sizes;
+          background-color: $marron;
+        }
+
+        svg path {
+          fill: $marron;
+        }
+
+        h3 {
+          margin-top: 0.5rem;
+          margin-bottom: 1rem;
+          font-size: 1.7rem;
+          color: $marron;
+        }
+
+        p {
+          margin: -1.5rem;
+        }
+
+        &.beurre {
+          top: 46rem;
+          left: -7rem;
+
+          > .dot {
+            top: 5rem;
+            right: -2rem;
+          }
+
+          > svg {
+            width: 12rem;
+          }
+        }
+
+        &.sel {
+          top: 63rem;
+          left: 10rem;
+
+          > .dot {
+            top: 3.5rem;
+            right: 0.5rem;
+          }
+
+          > svg {
+            width: 12rem;
+          }
+        }
+
+        &.oeufs {
+          top: 45rem;
+          left: 29rem;
+
+          > .dot {
+            bottom: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          > svg {
+            width: 10rem;
+          }
+        }
+
+        &.farine {
+          top: 68rem;
+          left: 40rem;
+
+          > .dot {
+            top: 5rem;
+            left: 2.5rem;
+          }
+
+          > svg {
+            width: 8rem;
+          }
+        }
+
+        &.chocolat {
+          bottom: 0rem;
+          right: 0rem;
+
+          > .dot {
+            bottom: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          > svg {
+            width: 13rem;
+          }
+        }
+      }
+    }
+  }
+}
