@@ -10,5 +10,7 @@ import "./map";
 
 document.addEventListener("DOMContentLoaded", () => {
   injectSvgs();
-  AOS.init();
+  AOS.init({
+    duration: 600,
+  });
 });
