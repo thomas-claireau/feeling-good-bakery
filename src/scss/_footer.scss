@@ -1,6 +1,29 @@
 footer {
   margin-top: 4rem;
 
+  .link-footer {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      &:before {
+        width: 100%;
+        transition: width 0.5s ease-in-out;
+      }
+    }
+
+    &:before {
+      content: "";
+      width: 0%;
+      height: 0.1rem;
+      position: absolute;
+      bottom: 0.2rem;
+      right: 0;
+      background-color: $marron;
+      transition: width 0.5s ease-in-out;
+    }
+  }
+
   > ul {
     display: flex;
     justify-content: center;
@@ -14,12 +37,40 @@ footer {
       color: $marron;
 
       &:not(:first-child) {
-        margin-left: 4rem;
+        margin-left: 8rem;
       }
 
-      &.switch {
+      &.switch > a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        &:hover {
+          span {
+            transition: all 0.3s ease-in-out;
+
+            &:first-child {
+              opacity: 0;
+            }
+
+            &:last-child {
+              opacity: 1;
+            }
+          }
+        }
+
         span {
+          transition: all 0.3s ease-in-out;
+
+          &:first-child {
+            position: relative;
+            opacity: 1;
+          }
+
           &:last-child {
+            opacity: 0;
+            position: absolute;
           }
         }
       }
