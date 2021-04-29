@@ -7,6 +7,7 @@ import { injectSvgs } from "./functions";
 import "./header";
 import "./recipes";
 import "./map";
+import "./footer";
 
 document.addEventListener("DOMContentLoaded", () => {
   injectSvgs();
