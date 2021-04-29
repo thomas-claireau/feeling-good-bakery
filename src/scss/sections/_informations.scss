@@ -16,6 +16,19 @@ section.informations {
         }
       }
 
+      &.social {
+        a {
+          &:before {
+            width: 115%;
+            height: 50%;
+          }
+
+          &:hover:before {
+            height: 70%;
+          }
+        }
+      }
+
       svg {
         width: 7rem;
         margin-bottom: 1.6rem;
