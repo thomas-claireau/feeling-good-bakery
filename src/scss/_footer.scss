@@ -80,4 +80,19 @@ footer {
       }
     }
   }
+
+  .modal {
+    .content {
+      > div,
+      > p {
+        margin-top: 3rem;
+        text-align: left;
+
+        > p {
+          margin-top: 3rem;
+          text-align: left;
+        }
+      }
+    }
+  }
 }
