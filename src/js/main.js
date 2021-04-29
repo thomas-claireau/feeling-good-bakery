@@ -9,6 +9,8 @@ import "./recipes";
 import "./map";
 import "./footer";
 
+import "./components/modal";
+
 document.addEventListener("DOMContentLoaded", () => {
   injectSvgs();
   AOS.init({
