@@ -10,8 +10,14 @@ section.informations {
     > li {
       list-style: none;
 
+      &.address {
+        svg {
+          width: 5.5rem;
+        }
+      }
+
       svg {
-        width: 6rem;
+        width: 7rem;
         margin-bottom: 1.6rem;
       }
 
