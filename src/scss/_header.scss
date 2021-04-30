@@ -6,6 +6,8 @@ header {
   > .social-links {
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 10000;
 
     > a {
       $sizes: 3.3rem;
