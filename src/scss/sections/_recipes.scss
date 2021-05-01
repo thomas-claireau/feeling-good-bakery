@@ -1,4 +1,5 @@
 section.recipes {
+  $break-custom: 1500px;
   margin-top: 23rem;
 
   > h2 {
@@ -10,22 +11,34 @@ section.recipes {
     height: 100%;
     margin: 11.6rem auto 0 auto;
 
+    @media screen and (max-width: $break-custom) {
+      width: 100%;
+    }
+
     .swiper-navigation {
-      $size: 10.5rem;
-      width: $size;
-      height: $size;
+      --size: 10.5rem;
+      width: var(--size);
+      height: var(--size);
       display: flex;
       justify-content: center;
       align-items: center;
       position: absolute;
       top: 40%;
       transform: translateY(-50%);
-      border-radius: $size;
+      border-radius: var(--size);
       border: 0.1rem solid $marron;
       background-color: transparent;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       z-index: 10;
+
+      @media screen and (max-width: $break-tablet) {
+        --size: 5.5rem;
+      }
+
+      @media screen and (max-width: $break-small) {
+        --size: 3rem;
+      }
 
       &:hover {
         background-color: $marron;
@@ -63,6 +76,12 @@ section.recipes {
       align-items: center;
       flex-direction: column;
       cursor: grab;
+
+      > img {
+        @media screen and (max-width: $break-large) {
+          width: 80%;
+        }
+      }
     }
 
     > .button-container {

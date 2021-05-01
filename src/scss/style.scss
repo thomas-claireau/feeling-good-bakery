@@ -19,7 +19,7 @@
 
 // temporary
 body
-  > section:not(.bg):not(.bandeau-header):not(.introduction):not(.description):not(.cookies) {
+  > section:not(.bg):not(.modals):not(.bandeau-header):not(.introduction):not(.description):not(.cookies):not(.recipes) {
   display: none;
 }
 
@@ -143,6 +143,11 @@ h2 {
   font-weight: 300;
   line-height: 8.5rem;
   color: $marron;
+
+  @media screen and (max-width: $break-small) {
+    font-size: 5rem;
+    line-height: 7rem;
+  }
 }
 
 p {
