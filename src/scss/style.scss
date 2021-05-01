@@ -17,6 +17,15 @@
 
 @import "footer";
 
+// temporary
+body > section:not(.bg):not(.bandeau-header) {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
 html {
   font-size: 10px;
 
@@ -39,6 +48,22 @@ body {
   font-family: $mainFont;
   overflow-x: hidden;
 
+  @media screen and (max-width: $break-header) {
+    padding: 3rem 6rem;
+  }
+
+  @media screen and (max-width: $break-large) {
+    padding: 3rem 4rem;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    padding: 1.5rem 3rem;
+  }
+
+  @media screen and (max-width: $break-tablet) {
+    padding: 1rem 2.5rem;
+  }
+
   &:before {
     content: "";
     width: 100%;
@@ -51,6 +76,11 @@ body {
     background-repeat: no-repeat;
     background-size: 34rem;
     z-index: 1;
+
+    @media screen and (max-width: $break-large) {
+      background-size: 31rem;
+      left: 9rem;
+    }
   }
 
   &.--modal-opened {
@@ -77,6 +107,14 @@ body {
 
   > section.bandeau-header {
     height: 85vh;
+
+    @media screen and (max-width: $break-large) {
+      height: 90vh;
+    }
+
+    @media screen and (max-width: $break-small) {
+      height: 75vh;
+    }
   }
 
   header,

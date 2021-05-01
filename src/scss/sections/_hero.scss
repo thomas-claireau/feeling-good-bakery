@@ -2,12 +2,24 @@ section.hero {
   height: 100%;
   margin-top: 2.5rem;
 
+  @media screen and (max-width: $break-medium) {
+    margin-top: 1.5rem;
+  }
+
+  @media screen and (max-width: $break-tablet) {
+    margin-top: 1rem;
+  }
+
   svg {
     width: 90%;
     position: absolute;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media screen and (max-width: $break-large) {
+      width: 130%;
+    }
   }
 
   video {
