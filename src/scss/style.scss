@@ -17,6 +17,10 @@
 
 @import "footer";
 
+footer {
+  display: none;
+}
+
 html {
   font-size: 10px;
 
@@ -113,7 +117,7 @@ body {
     }
   }
 
-  > section:not(.map-container) {
+  > section:not(.map-container):not(.informations) {
     @media screen and (max-width: 875px) {
       padding-right: 2rem;
       padding-left: 2rem;
