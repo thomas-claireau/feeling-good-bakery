@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         `.modal[data-id="${handleModal.dataset.id}"]`
       );
 
-      console.log(modal);
-
       if (!modal) return;
 
       const close = modal.querySelector(".close");
