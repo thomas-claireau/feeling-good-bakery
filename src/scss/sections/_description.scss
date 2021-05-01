@@ -11,11 +11,29 @@ section.description {
     background-color: #faf2f0;
     z-index: 0;
 
+    @media screen and (max-width: $break-medium) {
+      width: 70%;
+      right: auto;
+      left: -4rem;
+    }
+
+    @media screen and (max-width: $break-tablet) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: $break-small) {
+      height: 110%;
+    }
+
     > img {
       position: absolute;
       top: 50%;
       right: 0;
       transform: translateY(-50%);
+
+      @media screen and (max-width: $break-medium) {
+        display: none;
+      }
     }
   }
 
@@ -24,6 +42,15 @@ section.description {
     margin: auto;
     position: relative;
     text-align: center;
+
+    @media screen and (max-width: $break-medium) {
+      max-width: none;
+      width: 80%;
+    }
+
+    @media screen and (max-width: $break-tablet) {
+      width: 100%;
+    }
   }
 
   > .video-container {
@@ -32,11 +59,42 @@ section.description {
     position: relative;
     margin: 6rem auto 0 auto;
 
+    @media screen and (max-width: $break-medium) {
+      width: 100%;
+      height: auto;
+      text-align: right;
+    }
+
     > img[alt="visuel-cookie"] {
       position: absolute;
       top: -19rem;
       left: -28rem;
       z-index: 1;
+
+      @media screen and (max-width: $break-header + 200) {
+        width: 30rem;
+        left: -12vh;
+      }
+
+      @media screen and (max-width: $break-large) {
+        width: 25rem;
+        left: -8vh;
+      }
+
+      @media screen and (max-width: $break-medium) {
+        width: 30rem;
+        top: -3.5rem;
+        left: 3rem;
+      }
+
+      @media screen and (max-width: $break-tablet) {
+        width: 20rem;
+        left: 1.5rem;
+      }
+
+      @media screen and (max-width: $break-small) {
+        display: none;
+      }
     }
 
     > video {
@@ -44,6 +102,20 @@ section.description {
       height: 100%;
       position: relative;
       z-index: 10;
+
+      @media screen and (max-width: $break-medium) {
+        width: 80%;
+        margin-top: 6rem;
+      }
+
+      @media screen and (max-width: $break-tablet) {
+        margin-top: 3rem;
+      }
+
+      @media screen and (max-width: $break-small) {
+        width: 100%;
+        margin-top: 0;
+      }
     }
   }
 }
