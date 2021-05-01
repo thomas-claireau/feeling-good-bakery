@@ -18,7 +18,7 @@
 @import "footer";
 
 // temporary
-body > section:not(.bg):not(.bandeau-header) {
+body > section:not(.bg):not(.bandeau-header):not(.introduction) {
   display: none;
 }
 

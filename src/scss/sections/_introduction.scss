@@ -9,6 +9,10 @@ section.introduction {
     width: 56rem;
     min-width: 56rem;
     height: 88rem;
+
+    @media screen and (max-width: $break-medium) {
+      display: none;
+    }
   }
 
   > .right {
@@ -17,19 +21,57 @@ section.introduction {
     align-items: flex-end;
     flex-direction: column;
 
+    @media screen and (max-width: $break-medium) {
+      align-items: center;
+    }
+
     > .content {
       max-width: 70%;
       margin-right: auto;
       margin-left: 11vw;
       text-align: center;
+
+      @media screen and (max-width: $break-header) {
+        max-width: 85%;
+        margin-left: 6vw;
+      }
+
+      @media screen and (max-width: $break-medium) {
+        max-width: 100%;
+        margin-left: 0;
+      }
     }
 
-    > img {
+    > img.team {
       max-width: 38.2rem;
       max-height: 48.7rem;
       position: relative;
       top: 4rem;
       object-fit: cover;
+
+      @media screen and (max-width: $break-medium) {
+        max-width: none;
+        max-height: none;
+        width: 50%;
+        margin-top: 4rem;
+      }
+
+      @media screen and (max-width: $break-tablet) {
+        width: 75%;
+      }
+    }
+
+    > img.gif.mobile {
+      display: none;
+      margin-top: 4rem;
+
+      @media screen and (max-width: $break-medium) {
+        display: inherit;
+      }
+
+      @media screen and (max-width: $break-tablet - 100) {
+        width: 100%;
+      }
     }
   }
 }
