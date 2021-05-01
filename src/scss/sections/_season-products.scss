@@ -4,6 +4,20 @@ section.season-products {
   margin-top: 13rem;
   z-index: 10;
 
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-color: #fff;
+  }
+
+  > * {
+    position: relative;
+  }
+
   > .content {
     display: flex;
     justify-content: center;
