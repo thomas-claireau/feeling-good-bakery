@@ -17,16 +17,6 @@
 
 @import "footer";
 
-// temporary
-body
-  > section:not(.bg):not(.modals):not(.bandeau-header):not(.introduction):not(.description):not(.cookies):not(.recipes):not(.season-products):not(.map-container) {
-  display: none;
-}
-
-footer {
-  display: none;
-}
-
 html {
   font-size: 10px;
 
