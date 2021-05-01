@@ -1,44 +1,91 @@
 section.season-products {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  $break-custom: 1580px;
   position: relative;
   margin-top: 13rem;
   z-index: 10;
 
-  > div.season-product {
-    width: 49rem;
+  > .content {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 
-    &:not(:first-child) {
-      margin-left: 4rem;
+    @media screen and (max-width: $break-medium) {
+      margin-top: 10rem;
     }
 
-    &.wookie-cup {
-      position: relative;
-      top: 15rem;
+    @media screen and (max-width: $break-tablet) {
+      flex-direction: column;
     }
 
-    .content {
-      width: 100%;
-      padding: 3rem 1rem;
-      background-color: #faf2f0;
-      text-align: center;
+    > div.season-product {
+      width: 49rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
-      .quote {
-        font-family: $secondaryFont;
-        font-size: 3rem;
-        font-weight: 300;
-        font-style: italic;
+      @media screen and (max-width: $break-custom) {
+        width: 40rem;
       }
 
-      > p:not(.quote) {
-        margin-top: 2.5rem;
-        font-weight: 300;
-        color: $marronClair;
+      @media screen and (max-width: $break-header) {
+        width: 35rem;
+      }
+
+      @media screen and (max-width: $break-medium) {
+        width: 40rem;
+      }
+
+      @media screen and (max-width: $break-tablet) {
+        width: 80%;
+      }
+
+      @media screen and (max-width: $break-small + 100) {
+        width: 100%;
+      }
+
+      &:not(:first-child) {
+        margin-left: 4rem;
+
+        @media screen and (max-width: $break-tablet) {
+          margin-left: 0;
+        }
+      }
+
+      &.wookie-cup {
+        position: relative;
+        top: 15rem;
+
+        @media screen and (max-width: $break-tablet) {
+          top: 0;
+          margin-top: 4rem;
+        }
+      }
+
+      > img {
+        @media screen and (max-width: $break-custom) {
+          width: 100%;
+        }
+      }
+
+      .content {
+        width: 100%;
+        padding: 3rem 1rem;
+        background-color: #faf2f0;
+        text-align: center;
+
+        .quote {
+          font-family: $secondaryFont;
+          font-size: 3rem;
+          font-weight: 300;
+          font-style: italic;
+        }
+
+        > p:not(.quote) {
+          margin-top: 2.5rem;
+          font-weight: 300;
+          color: $marronClair;
+        }
       }
     }
   }
@@ -46,5 +93,17 @@ section.season-products {
   h2 {
     margin-left: 4vw;
     text-align: center;
+
+    @media screen and (max-width: $break-medium) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+
+      @media screen and (max-width: $break-medium) {
+        display: inherit;
+      }
+    }
   }
 }

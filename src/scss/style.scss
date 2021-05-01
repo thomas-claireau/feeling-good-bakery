@@ -19,7 +19,7 @@
 
 // temporary
 body
-  > section:not(.bg):not(.modals):not(.bandeau-header):not(.introduction):not(.description):not(.cookies):not(.recipes) {
+  > section:not(.bg):not(.modals):not(.bandeau-header):not(.introduction):not(.description):not(.cookies):not(.recipes):not(.season-products) {
   display: none;
 }
 
