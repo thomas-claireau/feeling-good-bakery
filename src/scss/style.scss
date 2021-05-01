@@ -19,7 +19,7 @@
 
 // temporary
 body
-  > section:not(.bg):not(.modals):not(.bandeau-header):not(.introduction):not(.description):not(.cookies):not(.recipes):not(.season-products) {
+  > section:not(.bg):not(.modals):not(.bandeau-header):not(.introduction):not(.description):not(.cookies):not(.recipes):not(.season-products):not(.map-container) {
   display: none;
 }
 
@@ -61,8 +61,13 @@ body {
     padding: 1.5rem 3rem;
   }
 
+  @media screen and (max-width: 875px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   @media screen and (max-width: $break-tablet) {
-    padding: 1rem 2.5rem;
+    padding: 1rem 0;
   }
 
   &:before {
@@ -115,6 +120,13 @@ body {
 
     @media screen and (max-width: $break-small) {
       height: 75vh;
+    }
+  }
+
+  > section:not(.map-container) {
+    @media screen and (max-width: 875px) {
+      padding-right: 2rem;
+      padding-left: 2rem;
     }
   }
 

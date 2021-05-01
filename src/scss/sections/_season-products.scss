@@ -12,6 +12,14 @@ section.season-products {
     width: 100%;
     height: 120%;
     background-color: #fff;
+
+    @media screen and (max-width: $break-large) {
+      height: 110%;
+    }
+
+    @media screen and (max-width: $break-tablet) {
+      content: none;
+    }
   }
 
   > * {
@@ -23,7 +31,7 @@ section.season-products {
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: $break-medium) {
+    @media screen and (max-width: $break-large) {
       margin-top: 10rem;
     }
 
@@ -46,7 +54,7 @@ section.season-products {
         width: 35rem;
       }
 
-      @media screen and (max-width: $break-medium) {
+      @media screen and (max-width: $break-large) {
         width: 40rem;
       }
 
@@ -108,14 +116,14 @@ section.season-products {
     margin-left: 4vw;
     text-align: center;
 
-    @media screen and (max-width: $break-medium) {
+    @media screen and (max-width: $break-large) {
       display: none;
     }
 
     &.mobile {
       display: none;
 
-      @media screen and (max-width: $break-medium) {
+      @media screen and (max-width: $break-large) {
         display: inherit;
       }
     }
