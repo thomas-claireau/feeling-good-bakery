@@ -17,10 +17,6 @@
 
 @import "footer";
 
-footer {
-  display: none;
-}
-
 html {
   font-size: 10px;
 
@@ -113,7 +109,7 @@ body {
     }
 
     @media screen and (max-width: $break-small) {
-      height: 75vh;
+      height: 50vh;
     }
   }
 

@@ -4,6 +4,10 @@ section.informations {
   margin-top: 23rem;
   text-align: center;
 
+  @media screen and (max-width: $break-tablet) {
+    margin-top: 13rem;
+  }
+
   > ul {
     display: flex;
     justify-content: space-around;
