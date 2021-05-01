@@ -75,7 +75,6 @@ section.recipes {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      cursor: grab;
 
       > img {
         @media screen and (max-width: $break-large) {

@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const swiper = new Swiper(swiperContainer, {
     loop: true,
+    allowTouchMove: false,
     navigation: {
       nextEl: swiperNext,
       prevEl: swiperPrev,
