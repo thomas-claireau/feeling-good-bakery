@@ -1,4 +1,5 @@
 section.cookies {
+  $break-custom: 1600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,10 +7,29 @@ section.cookies {
   padding-top: 14rem;
   padding-left: 6vw;
 
+  @media screen and (max-width: $break-custom) {
+    padding-left: 3vw;
+  }
+
+  @media screen and (max-width: $break-tablet) {
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 8rem;
+    padding-left: 0;
+  }
+
   > img {
     position: absolute;
     top: -6rem;
     left: 0;
+
+    @media screen and (max-width: $break-custom) {
+      width: 18vw;
+    }
+
+    @media screen and (max-width: $break-medium) {
+      display: none;
+    }
   }
 
   > .left {
@@ -18,11 +38,23 @@ section.cookies {
     > p {
       max-width: 50rem;
       margin: auto;
+
+      @media screen and (max-width: $break-tablet) {
+        max-width: none;
+      }
     }
   }
 
   > .right {
     position: relative;
+
+    @media screen and (max-width: $break-custom) {
+      text-align: right;
+    }
+
+    @media screen and (max-width: $break-tablet) {
+      margin-top: 6rem;
+    }
 
     &:before {
       content: "";
@@ -33,10 +65,29 @@ section.cookies {
       left: -7.2rem;
       background-color: #faf2f0;
       z-index: 0;
+
+      @media screen and (max-width: $break-custom) {
+        left: 0rem;
+      }
+
+      @media screen and (max-width: $break-tablet) {
+        left: -9rem;
+        bottom: -5rem;
+      }
     }
 
     > * {
       position: relative;
+    }
+
+    > img {
+      @media screen and (max-width: $break-custom) {
+        width: 80%;
+      }
+
+      @media screen and (max-width: $break-tablet) {
+        width: 100%;
+      }
     }
   }
 }

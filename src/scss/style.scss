@@ -19,7 +19,7 @@
 
 // temporary
 body
-  > section:not(.bg):not(.bandeau-header):not(.introduction):not(.description) {
+  > section:not(.bg):not(.bandeau-header):not(.introduction):not(.description):not(.cookies) {
   display: none;
 }
 
