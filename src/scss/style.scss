@@ -18,6 +18,7 @@
 @import "footer";
 
 html {
+  overflow-x: hidden;
   font-size: 10px;
 
   @media screen and (max-width: $break-large) {
@@ -106,10 +107,6 @@ body {
 
     @media screen and (max-width: $break-large) {
       height: 90vh;
-    }
-
-    @media screen and (max-width: $break-small) {
-      height: 50vh;
     }
   }
 
