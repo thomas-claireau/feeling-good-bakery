@@ -17,14 +17,6 @@
     height: 70%;
   }
 
-  @media screen and (max-width: $break-tablet) {
-    height: 60%;
-  }
-
-  @media screen and (max-width: $break-small) {
-    height: 50%;
-  }
-
   &.open {
     opacity: 1;
     z-index: 1000;
