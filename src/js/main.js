@@ -11,6 +11,8 @@ import "./footer";
 
 import "./components/modal";
 
+import "../../assets/img/carte-de-france.png";
+
 document.addEventListener("DOMContentLoaded", () => {
   injectSvgs();
   AOS.init({
