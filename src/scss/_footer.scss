@@ -1,6 +1,10 @@
 footer {
   margin-top: 4rem;
 
+  @media screen and (max-width: $break-tablet) {
+    padding-bottom: 2rem;
+  }
+
   .link-footer {
     position: relative;
     cursor: pointer;
