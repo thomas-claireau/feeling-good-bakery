@@ -65,6 +65,10 @@ header {
       z-index: 1000;
       transition: all 0.3s ease-in-out;
 
+      @media screen and (max-width: $break-tablet) {
+        height: 100vh !important;
+      }
+
       &.hidden {
         height: 0px !important;
         opacity: 0;
