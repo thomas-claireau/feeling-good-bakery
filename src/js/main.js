@@ -32,3 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.onreadystatechange = function () {
+  console.log(document.readyState);
+};
