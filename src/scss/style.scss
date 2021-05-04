@@ -6,6 +6,7 @@
 @import "./components/link";
 
 @import "header";
+@import "sections/loader";
 @import "sections/hero";
 @import "sections/introduction";
 @import "sections/description";
@@ -86,7 +87,7 @@ body {
     position: relative;
   }
 
-  > section:not(.bg) {
+  > section:not(.bg):not(.loader) {
     padding-right: 10rem;
     padding-left: 10rem;
 

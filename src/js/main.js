@@ -32,5 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.onreadystatechange = function () {
-  console.log(document.readyState);
+  if (document.readyState == "complete") {
+    document.body.classList.remove("--loading");
+  }
 };
