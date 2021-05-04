@@ -20,6 +20,8 @@ section.map-container {
     width: 100%;
     flex-direction: column;
     margin-top: 25rem;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 
   @media screen and (max-width: $break-tablet) {
@@ -126,6 +128,10 @@ section.map-container {
         &.beurre {
           top: 46rem;
           left: -7rem;
+
+          @media screen and (max-width: $break-custom) {
+            left: -4rem;
+          }
 
           > .dot {
             top: 5rem;

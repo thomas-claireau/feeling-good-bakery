@@ -4,17 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!burgerMenu) return;
 
   const handle = burgerMenu.querySelector(".handle");
-  const hero = document.querySelector("section.hero");
-  const navigation = burgerMenu.querySelector('ul[role="navigation"]');
+  const navigation = document.querySelector("ul.navigation");
 
   handle.addEventListener("click", () => {
     handle.classList.toggle("open");
     navigation.classList.toggle("hidden");
   });
-
-  addNavigationHeight();
-
-  window.addEventListener("resize", addNavigationHeight);
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
@@ -22,10 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
       navigation.classList.add("hidden");
     }
   });
-
-  function addNavigationHeight() {
-    const bottom = Math.floor(hero.getBoundingClientRect().bottom);
-
-    navigation.style.height = bottom + "px";
-  }
 });

@@ -8,6 +8,11 @@ section.informations {
     margin-top: 13rem;
   }
 
+  @media screen and (max-width: $break-custom) {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
   > ul {
     display: flex;
     justify-content: space-around;

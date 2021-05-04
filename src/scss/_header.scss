@@ -2,6 +2,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 3.7rem;
+
+  @media screen and (max-width: $break-header) {
+    padding-top: 3rem;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    padding-top: 1.5rem;
+  }
+
+  @media screen and (max-width: $break-tablet) {
+    padding-top: 1rem;
+  }
 
   > .social-links {
     display: flex;
@@ -42,105 +55,6 @@ header {
           fill: #fff;
           stroke: #fff;
           stroke-width: 0;
-        }
-      }
-    }
-  }
-
-  > nav {
-    ul[role="navigation"] {
-      width: 100%;
-      height: inherit;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      position: fixed;
-      top: 0;
-      left: 0;
-      margin: 0;
-      padding: 0;
-      background-color: #501e18;
-      opacity: 1;
-      z-index: 1000;
-      transition: all 0.3s ease-in-out;
-
-      @media screen and (max-width: $break-tablet) {
-        height: 100vh !important;
-      }
-
-      &.hidden {
-        height: 0px !important;
-        opacity: 0;
-        z-index: -1;
-        transition: all 0.3s ease-in-out;
-      }
-
-      > li {
-        list-style-type: none;
-
-        &:not(:first-child) {
-          margin-top: 8.6rem;
-        }
-
-        > a {
-          color: #fff;
-          font-size: 2.4rem;
-          font-weight: 300;
-
-          &:before {
-            background-color: rgb(107, 41, 33);
-          }
-        }
-      }
-    }
-
-    .burger-menu {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      color: #fff;
-
-      > span {
-        position: relative;
-        z-index: 10000;
-      }
-
-      .handle {
-        width: 2.7rem;
-        height: 1.8rem;
-        margin-left: 1.8rem;
-        position: relative;
-        cursor: pointer;
-        z-index: 10000;
-
-        &.open {
-          svg {
-            &[title="burger-icon"] {
-              opacity: 0;
-            }
-
-            &[title="cross-icon"] {
-              opacity: 1;
-            }
-          }
-        }
-
-        svg {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          transition: all 0.3s ease-in-out;
-
-          &[title="burger-icon"] {
-            opacity: 1;
-          }
-
-          &[title="cross-icon"] {
-            opacity: 0;
-          }
         }
       }
     }
