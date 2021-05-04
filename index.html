@@ -8,7 +8,11 @@
       href="./assets/img/icons/favicon.svg"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Feeling Good Bakery</title>
+    <title>Feeling Good Bakery | No worries, just cookies</title>
+    <meta
+      name="description"
+      content="✌🏽 No worries, just cookies ! 🍪 Cookies chauds et fondants à toute heure"
+    />
   </head>
   <body class="--loading">
     <section class="loader">
@@ -851,5 +855,45 @@
       </div>
     </footer>
     <script type="module" src="./src/js/main.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nantes, France",
+          "postalCode": "44000",
+          "streetAddress": "10 Rue des Halles"
+        },
+        "email": "donnemoidescookies@gmail.com"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nantes, France",
+          "addressRegion": "FR",
+          "postalCode": "44000",
+          "streetAddress": "10 Rue des Halles"
+        },
+        "name": "Feeling Good Bakery",
+        "url": "https://www.feelingoodbakery.fr"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Feeling Good Bakery",
+        "url": "https://www.feelingoodbakery.fr",
+        "sameAs": [
+          "https://www.facebook.com/feelingoodbakery",
+          "https://www.instagram.com/feelingoodbakery/"
+        ]
+      }
+    </script>
   </body>
 </html>
