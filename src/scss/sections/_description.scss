@@ -5,11 +5,15 @@ section.description {
   > .light-background {
     position: absolute;
     top: -16rem;
-    right: 2.8rem;
+    right: 14rem;
     width: 50%;
     height: 90%;
     background-color: #faf2f0;
     z-index: 0;
+
+    @media screen and (max-width: $break-large) {
+      right: 7rem;
+    }
 
     @media screen and (max-width: $break-medium) {
       width: 70%;

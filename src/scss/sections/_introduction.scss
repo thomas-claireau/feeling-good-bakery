@@ -49,6 +49,10 @@ section.introduction {
       top: 2rem;
       object-fit: cover;
 
+      @media screen and (max-width: $break-large) {
+        top: 4rem;
+      }
+
       @media screen and (max-width: $break-medium) {
         max-width: none;
         max-height: none;
