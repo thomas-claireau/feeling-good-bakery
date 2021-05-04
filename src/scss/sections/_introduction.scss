@@ -26,7 +26,7 @@ section.introduction {
     }
 
     > .content {
-      max-width: 70%;
+      max-width: 54rem;
       margin-right: auto;
       margin-left: 11vw;
       text-align: center;
@@ -46,7 +46,7 @@ section.introduction {
       max-width: 38.2rem;
       max-height: 48.7rem;
       position: relative;
-      top: 4rem;
+      top: 2rem;
       object-fit: cover;
 
       @media screen and (max-width: $break-medium) {
