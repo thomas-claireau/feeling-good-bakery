@@ -1,9 +1,0 @@
-.git
-ci
-.travis.yml
-.rsyncignore
-deploy_rsa
-deploy_rsa.enc
-node_modules
-.gitignore
-README.md
