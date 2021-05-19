@@ -75,8 +75,7 @@ section.map-container {
         position: absolute;
         list-style-type: none;
         text-align: center;
-        opacity: 0;
-        transition: opacity 0.8s ease-in-out;
+        transition-property: opacity !important;
 
         @media screen and (max-width: $break-custom-2) {
           width: 50%;
@@ -90,11 +89,6 @@ section.map-container {
 
         @media screen and (max-width: $break-small) {
           width: 50%;
-        }
-
-        &.visible {
-          opacity: 1;
-          transition: opacity 0.8s ease-in-out;
         }
 
         > .dot {
