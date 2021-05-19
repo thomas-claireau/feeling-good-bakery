@@ -1,6 +1,3 @@
 #!/bin/sh
-rsync -az -O --force --delete --progress --exclude-from=".rsyncignore" -e "ssh -p $PORT" ./ "$USERNAME"@"$HOST":"$PROJET_RECETTE"
-ssh -p $PORT $USERNAME@$HOST "
-	cd $PROJET_RECETTE && pwd;
-	exit;
-"
+rsync -az -O --force --delete --progress --exclude-from=".rsyncignore" -e "ssh -p $PORT" ./dist "$USERNAME"@"$HOST":"$PROJET_RECETTE"
+ssh -p $PORT $USERNAME@$HOST

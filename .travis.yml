@@ -11,5 +11,6 @@ before_install:
   - chmod +x ./ci/deploy-production
   - chmod +x ./ci/deploy-recette
 script:
+  - npm install && npm run build
   - if [ "$TRAVIS_BRANCH" = "master" ]; then ./ci/deploy-production; fi
   - if [ "$TRAVIS_BRANCH" = "dev" ]; then ./ci/deploy-recette; fi
