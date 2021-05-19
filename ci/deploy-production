@@ -1,6 +1,6 @@
 #!/bin/sh
 rsync -az -O --force --delete --progress --exclude-from=".rsyncignore" -e "ssh -p $PORT" ./ "$USERNAME"@"$HOST":"$PROJET_PROD"
 ssh -p $PORT $USERNAME@$HOST "
-	cd $PROJET_PROD && npm install && npm run build;
+	cd $PROJET_PROD && pwd;
 	exit;
 "
