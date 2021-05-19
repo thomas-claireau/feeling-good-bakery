@@ -1,1 +1,168 @@
+@import "fonts";
+@import "vars";
 
+@import "./components/menu";
+@import "./components/modal";
+@import "./components/link";
+
+@import "header";
+@import "sections/loader";
+@import "sections/hero";
+@import "sections/introduction";
+@import "sections/description";
+@import "sections/cookies";
+@import "sections/recipes";
+@import "sections/season-products";
+@import "sections/map";
+@import "sections/mosaic";
+@import "sections/informations";
+
+@import "footer";
+
+html {
+  overflow-x: hidden;
+  font-size: 10px;
+
+  @media screen and (max-width: $break-large) {
+    font-size: 9px;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    font-size: 8px;
+  }
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: $mainFont;
+  overflow-x: hidden;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../../assets/img/ellipse.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 34rem;
+    z-index: 1;
+
+    @media screen and (max-width: $break-large) {
+      background-size: 31rem;
+      left: 9rem;
+    }
+  }
+
+  &.--modal-opened {
+    overflow: hidden;
+
+    > section.bg {
+      opacity: 0.5;
+      z-index: 100;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  > section.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  > section.bandeau-header {
+    position: relative;
+  }
+
+  > section:not(.bg):not(.loader) {
+    padding-right: 10rem;
+    padding-left: 10rem;
+
+    @media screen and (max-width: $break-header) {
+      padding-right: 6rem;
+      padding-left: 6rem;
+    }
+
+    @media screen and (max-width: $break-large) {
+      padding-right: 4rem;
+      padding-left: 4rem;
+    }
+
+    @media screen and (max-width: $break-medium) {
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+
+    @media screen and (max-width: 875px) {
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+  }
+
+  > section.informations .map-container {
+    background-image: url("../../assets/img/carte-gmap.jpg");
+  }
+
+  > section.map-container > .map {
+    background-image: url("../../assets/img/carte-de-france.png");
+  }
+
+  header,
+  section,
+  footer {
+    position: relative;
+  }
+
+  header {
+    z-index: 10000;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: -2rem 0 3rem 0;
+  font-size: 6.6rem;
+  font-family: $secondaryFont;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 8.5rem;
+  color: $marron;
+
+  @media screen and (max-width: $break-small) {
+    font-size: 5rem;
+    line-height: 7rem;
+  }
+}
+
+p {
+  margin: 0;
+  font-size: 1.9rem;
+  color: $marron;
+  line-height: 4rem;
+}
+
+button {
+  font-family: $mainFont;
+}
+
+a {
+  text-decoration: none;
+}

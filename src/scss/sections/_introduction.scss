@@ -1,0 +1,86 @@
+section.introduction {
+  $break-custom: 1520px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 11rem;
+  z-index: 10;
+
+  > video {
+    width: 56rem;
+    min-width: 56rem;
+    height: 88rem;
+
+    @media screen and (max-width: $break-medium) {
+      display: none;
+    }
+  }
+
+  > .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+
+    @media screen and (max-width: $break-medium) {
+      align-items: center;
+    }
+
+    > .content {
+      max-width: 54rem;
+      margin-right: 10vw;
+      margin-left: auto;
+      text-align: center;
+
+      @media screen and (max-width: $break-custom) {
+        margin-right: auto;
+      }
+
+      @media screen and (max-width: $break-header) {
+        max-width: 85%;
+        margin-left: 6vw;
+      }
+
+      @media screen and (max-width: $break-medium) {
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    > img.team {
+      max-width: 38.2rem;
+      max-height: 48.7rem;
+      position: relative;
+      top: 2rem;
+      object-fit: cover;
+
+      @media screen and (max-width: $break-large) {
+        top: 4rem;
+      }
+
+      @media screen and (max-width: $break-medium) {
+        max-width: none;
+        max-height: none;
+        width: 50%;
+        margin-top: 4rem;
+      }
+
+      @media screen and (max-width: $break-tablet) {
+        width: 75%;
+      }
+    }
+
+    > video.gif.mobile {
+      display: none;
+      margin-top: 4rem;
+
+      @media screen and (max-width: $break-medium) {
+        display: inherit;
+      }
+
+      @media screen and (max-width: $break-tablet - 100) {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+body.--loading {
+  overflow: hidden;
+
+  .loader {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10001;
+  }
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  > img {
+    width: 7rem;
+  }
+}

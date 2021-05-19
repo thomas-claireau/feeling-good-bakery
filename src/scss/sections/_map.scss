@@ -1,0 +1,206 @@
+section.map-container {
+  $break-custom: 1580px;
+  $break-custom-2: 875px;
+
+  width: 80%;
+  min-height: 95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 5rem auto 0 auto;
+  z-index: 1;
+
+  @media screen and (max-width: $break-custom) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: $break-custom-2) {
+    min-height: auto;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 25rem;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  @media screen and (max-width: $break-tablet) {
+    margin-top: 10rem;
+  }
+
+  > .content {
+    width: 50rem;
+    margin-left: auto;
+    margin-right: 5rem;
+    text-align: center;
+
+    @media screen and (max-width: $break-header) {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: $break-medium + 50) {
+      width: 35rem;
+    }
+
+    @media screen and (max-width: $break-custom-2) {
+      width: 100%;
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+  }
+
+  > .map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+
+    @media screen and (max-width: $break-custom-2) {
+      position: relative;
+      background-size: auto;
+      background-position: 10%;
+    }
+
+    > .ingredients {
+      @media screen and (max-width: $break-custom-2) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+      }
+
+      > .ingredient {
+        position: absolute;
+        list-style-type: none;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+
+        @media screen and (max-width: $break-custom-2) {
+          width: 50%;
+          position: relative;
+          top: auto !important;
+          left: auto !important;
+          right: auto !important;
+          bottom: auto !important;
+          margin-top: 8rem;
+        }
+
+        @media screen and (max-width: $break-small) {
+          width: 50%;
+        }
+
+        &.visible {
+          opacity: 1;
+          transition: opacity 0.8s ease-in-out;
+        }
+
+        > .dot {
+          $sizes: 1rem;
+          width: $sizes;
+          height: $sizes;
+          position: absolute;
+          border-radius: $sizes;
+          background-color: $marron;
+
+          @media screen and (max-width: $break-custom-2) {
+            display: none;
+          }
+        }
+
+        svg path {
+          fill: $marron;
+        }
+
+        h3 {
+          margin-top: 0.5rem;
+          margin-bottom: 1rem;
+          font-size: 1.7rem;
+          color: $marron;
+        }
+
+        p {
+          margin: -1.5rem;
+        }
+
+        &.beurre {
+          top: 46rem;
+          left: -7rem;
+
+          @media screen and (max-width: $break-custom) {
+            left: -4rem;
+          }
+
+          > .dot {
+            top: 5rem;
+            right: -2rem;
+          }
+
+          > svg {
+            width: 12rem;
+          }
+        }
+
+        &.sel {
+          top: 63rem;
+          left: 10rem;
+
+          > .dot {
+            top: 3.5rem;
+            right: 0.5rem;
+          }
+
+          > svg {
+            width: 12rem;
+          }
+        }
+
+        &.oeufs {
+          top: 45rem;
+          left: 29rem;
+
+          > .dot {
+            bottom: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          > svg {
+            width: 10rem;
+          }
+        }
+
+        &.farine {
+          top: 68rem;
+          left: 40rem;
+
+          > .dot {
+            top: 5rem;
+            left: 2.5rem;
+          }
+
+          > svg {
+            width: 8rem;
+          }
+        }
+
+        &.chocolat {
+          bottom: 0rem;
+          right: 0rem;
+
+          > .dot {
+            bottom: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          > svg {
+            width: 13rem;
+          }
+        }
+      }
+    }
+  }
+}

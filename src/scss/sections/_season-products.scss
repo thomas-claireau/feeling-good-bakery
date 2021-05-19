@@ -1,0 +1,131 @@
+section.season-products {
+  $break-custom: 1580px;
+  position: relative;
+  margin-top: 13rem;
+  z-index: 10;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-color: #fff;
+
+    @media screen and (max-width: $break-large) {
+      height: 110%;
+    }
+
+    @media screen and (max-width: $break-tablet) {
+      content: none;
+    }
+  }
+
+  > * {
+    position: relative;
+  }
+
+  > .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $break-large) {
+      margin-top: 10rem;
+    }
+
+    @media screen and (max-width: $break-tablet) {
+      flex-direction: column;
+    }
+
+    > div.season-product {
+      width: 49rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      @media screen and (max-width: $break-custom) {
+        width: 40rem;
+      }
+
+      @media screen and (max-width: $break-header) {
+        width: 35rem;
+      }
+
+      @media screen and (max-width: $break-large) {
+        width: 40rem;
+      }
+
+      @media screen and (max-width: $break-tablet) {
+        width: 80%;
+      }
+
+      @media screen and (max-width: $break-small + 100) {
+        width: 100%;
+      }
+
+      &:not(:first-child) {
+        margin-left: 4rem;
+
+        @media screen and (max-width: $break-tablet) {
+          margin-left: 0;
+        }
+      }
+
+      &.wookie-cup {
+        position: relative;
+        top: 15rem;
+
+        @media screen and (max-width: $break-tablet) {
+          top: 0;
+          margin-top: 4rem;
+        }
+      }
+
+      > img {
+        @media screen and (max-width: $break-custom) {
+          width: 100%;
+        }
+      }
+
+      .content {
+        width: 100%;
+        padding: 3rem 1rem;
+        background-color: #faf2f0;
+        text-align: center;
+
+        .quote {
+          font-family: $secondaryFont;
+          font-size: 3rem;
+          font-weight: 300;
+          font-style: italic;
+        }
+
+        > p:not(.quote) {
+          margin-top: 2.5rem;
+          font-weight: 300;
+          color: $marronClair;
+        }
+      }
+    }
+  }
+
+  h2 {
+    margin-left: 4vw;
+    text-align: center;
+
+    @media screen and (max-width: $break-large) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+
+      @media screen and (max-width: $break-large) {
+        display: inherit;
+      }
+    }
+  }
+}

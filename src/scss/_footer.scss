@@ -1,0 +1,132 @@
+footer {
+  margin-top: 4rem;
+  padding-bottom: 3.5rem;
+
+  @media screen and (max-width: $break-tablet) {
+    padding-bottom: 2rem;
+  }
+
+  .link-footer {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      &:before {
+        width: 100%;
+        transition: width 0.5s ease-in-out;
+      }
+    }
+
+    &:before {
+      content: "";
+      width: 0%;
+      height: 0.1rem;
+      position: absolute;
+      bottom: 0.2rem;
+      right: 0;
+      background-color: $marron;
+      transition: width 0.5s ease-in-out;
+    }
+  }
+
+  > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (max-width: $break-medium) {
+      flex-direction: column;
+    }
+
+    li {
+      font-size: 1.4rem;
+      color: $marron;
+
+      &:not(:first-child) {
+        margin-left: 8rem;
+
+        @media screen and (max-width: $break-medium) {
+          margin-left: 0;
+          margin-top: 2rem;
+        }
+      }
+
+      &.switch {
+        > a {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+
+          @media screen and (max-width: $break-medium) {
+            flex-direction: row;
+          }
+
+          &:hover {
+            @media screen and (min-width: $break-medium + 1) {
+              span {
+                transition: all 0.3s ease-in-out;
+
+                &:first-child {
+                  opacity: 0;
+                }
+
+                &:last-child {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          span {
+            @media screen and (min-width: $break-medium + 1) {
+              transition: all 0.3s ease-in-out;
+
+              &:first-child {
+                position: relative;
+                opacity: 1;
+              }
+
+              &:last-child {
+                opacity: 0;
+                position: absolute;
+              }
+            }
+
+            &:first-child {
+              opacity: 0.7;
+            }
+
+            &:not(:first-child) {
+              @media screen and (max-width: $break-medium) {
+                margin-left: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      > a {
+        color: $marron;
+      }
+    }
+  }
+
+  .modal {
+    .content {
+      > div,
+      > p {
+        margin-top: 3rem;
+        text-align: left;
+
+        > p {
+          margin-top: 3rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

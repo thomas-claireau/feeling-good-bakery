@@ -1,0 +1,88 @@
+.modal {
+  width: 90vw;
+  height: 80%;
+  max-height: 110rem;
+  max-width: 108.8rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 9.2rem 5rem 6rem 5rem;
+  transform: translate(-50%, -50%);
+  background-color: #f9efec;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+
+  @media screen and (max-width: $break-medium) {
+    height: 70%;
+  }
+
+  &.open {
+    opacity: 1;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+
+  > .close {
+    width: 1.1rem;
+    height: 1.1rem;
+    position: absolute;
+    top: 3.6rem;
+    right: 4rem;
+    cursor: pointer;
+
+    rect {
+      fill: $marronFonce;
+    }
+  }
+
+  > .content {
+    height: 100%;
+    overflow-y: auto;
+
+    > .cookie {
+      text-align: center;
+
+      > img {
+        max-width: 35rem;
+        margin: auto;
+
+        @media screen and (max-width: $break-tablet) {
+          max-width: none;
+          width: 50%;
+        }
+
+        @media screen and (max-width: $break-small) {
+          width: 30%;
+        }
+      }
+    }
+
+    > h2 {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    h3 {
+      margin: 0 0 -3rem 0;
+      padding: 0 5rem;
+      font-size: 1.8rem;
+      color: $marron;
+
+      @media screen and (max-width: $break-tablet) {
+        padding: 0;
+      }
+    }
+
+    p {
+      padding: 0 5rem;
+      text-align: center;
+      font-size: 1.8rem;
+      line-height: 3rem;
+
+      @media screen and (max-width: $break-tablet) {
+        padding: 0;
+      }
+    }
+  }
+}
