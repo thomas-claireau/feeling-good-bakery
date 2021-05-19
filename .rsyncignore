@@ -1,0 +1,7 @@
+.git
+ci
+.travis.yml
+.rsyncignore
+node_modules
+.gitignore
+README.md
