@@ -1,3 +1,2 @@
 #!/bin/sh
 rsync -az -O --force --delete --progress -e "ssh -p $PORT" ./dist/* "$USERNAME"@"$HOST":"$PROJET_RECETTE"
-ssh -p $PORT $USERNAME@$HOST "exit;"
