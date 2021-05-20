@@ -13,6 +13,30 @@
       name="description"
       content="✌🏽 No worries, just cookies ! 🍪 Cookies chauds et fondants à toute heure"
     />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MC0HGGF759"
+    ></script>
+
+    <script>
+      void 0 === window._axcb && (window._axcb = []);
+      window._axcb.push(function (axeptio) {
+        axeptio.on("cookies:complete", function (choices) {
+          if (choices.google_analytics) {
+            console.log("passe");
+            window.dataLayer = window.dataLayer || [];
+
+            gtag("js", new Date());
+            gtag("config", "G-MC0HGGF759");
+          }
+        });
+      });
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+    </script>
   </head>
   <body class="--loading">
     <section class="loader">
@@ -896,13 +920,6 @@
         e.src = "//static.axept.io/sdk.js";
         t.parentNode.insertBefore(e, t);
       })(document, "script");
-
-      void 0 === window._axcb && (window._axcb = []);
-      window._axcb.push(function (axeptio) {
-        axeptio.on("cookies:complete", function (choices) {
-          console.log("axeptio is ok");
-        });
-      });
     </script>
   </body>
 </html>
