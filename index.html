@@ -24,7 +24,6 @@
       window._axcb.push(function (axeptio) {
         axeptio.on("cookies:complete", function (choices) {
           if (choices.google_analytics) {
-            console.log("passe");
             window.dataLayer = window.dataLayer || [];
 
             gtag("js", new Date());
