@@ -34,4 +34,8 @@ document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     document.body.classList.remove("--loading");
   }
+
+  setTimeout(() => {
+    document.body.classList.remove("--loading");
+  }, 4000);
 };
