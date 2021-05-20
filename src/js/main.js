@@ -35,7 +35,3 @@ document.onreadystatechange = function () {
     document.body.classList.remove("--loading");
   }
 };
-
-setTimeout(() => {
-  document.body.classList.remove("--loading");
-}, 4000);

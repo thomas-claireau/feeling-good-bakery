@@ -20,6 +20,10 @@
     ></script>
 
     <script>
+      setTimeout(() => {
+        document.body.classList.remove("--loading");
+      }, 5000);
+
       void 0 === window._axcb && (window._axcb = []);
       window._axcb.push(function (axeptio) {
         axeptio.on("cookies:complete", function (choices) {
@@ -116,7 +120,13 @@
       </ul>
     </section>
     <section id="notre-histoire" class="introduction">
-      <video src="./assets/videos/gif.mp4" autoplay muted loop></video>
+      <video
+        src="./assets/videos/gif.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
       <div class="right">
         <div class="content">
           <h2>A Feeling Good Story</h2>
@@ -137,6 +147,7 @@
           autoplay
           muted
           loop
+          playsinline
         ></video>
         <img
           class="team"
@@ -175,6 +186,7 @@
           autoplay
           muted
           loop
+          playsinline
         ></video>
       </div>
     </section>
