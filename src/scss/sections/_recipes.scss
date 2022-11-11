@@ -9,6 +9,7 @@ section.recipes {
   > .swiper-container {
     width: 85%;
     height: 100%;
+    position: relative;
     margin: 11.6rem auto 0 auto;
 
     @media screen and (max-width: $break-custom) {
