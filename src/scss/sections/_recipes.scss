@@ -77,6 +77,14 @@ section.recipes {
       align-items: center;
       flex-direction: column;
 
+      &[data-id="peanut-better"] {
+        > img {
+          @media screen and (max-width: $break-large) {
+            width: 60%;
+          }
+        }
+      }
+
       > img {
         @media screen and (max-width: $break-large) {
           width: 80%;
