@@ -1,5 +1,4 @@
 import "../scss/style.scss";
-import "vite/dynamic-import-polyfill";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
